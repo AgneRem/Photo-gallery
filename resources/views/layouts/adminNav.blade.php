@@ -65,8 +65,8 @@
                     <div class="side-menu-container">
                         <ul class="nav navbar-nav">
 
-                            <li><a href="{{ route ('theme.index') }}"><span class="glyphicon glyphicon-plane"></span>Themes</a></li>
-                            <li><a href=" {{ route ('album.index')}}"><span class="glyphicon glyphicon-cloud"></span>Albums</a></li>
+                            <li><a href="{{ route ('themes.index') }}"><span class="glyphicon glyphicon-plane"></span>Themes</a></li>
+                            <li><a href=" {{ route ('albums.index')}}"><span class="glyphicon glyphicon-cloud"></span>Albums</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>

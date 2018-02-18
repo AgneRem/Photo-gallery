@@ -19,7 +19,7 @@ Route::get('/', 'HomeController@index')->name('home');
 //nurodom, kad sitie keliai bus tik prisijungusiems. prefix nurodo, kad pradzioje url visada bus admin ir kad nereiketu rasytu
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function() {
   Route::get('/', 'AdminController@index')->name('admin');
-  Route::resource('/theme', 'ThemeController');
-  Route::resource('/album', 'AlbumController');
+  Route::resource('/themes', 'ThemeController');
+  Route::resource('/albums', 'AlbumController');
 
 });

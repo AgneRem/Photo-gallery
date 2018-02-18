@@ -24,7 +24,7 @@ class ThemeController extends Controller
       {
         $this->authorize('create', Theme::class);
         Theme::create($request->all());
-        return redirect('admin/theme');
+        return redirect('admin/themes');
       }
 
     public function show(Theme $theme)
@@ -42,7 +42,7 @@ class ThemeController extends Controller
       {
         $this->authorize('update', Theme::class);
         $theme->update($request->all());
-        return redirect('admin/theme')->with(['message'=>'Tema pakoreguota']);
+        return redirect('admin/themes')->with(['message'=>'Tema pakoreguota']);
       }
 
       public function destroy(Theme $theme)
@@ -51,7 +51,7 @@ class ThemeController extends Controller
         $theme->delete();
         // if ($theme->albums->count()==0){
         //   $theme->delete();
-        return redirect('admin/theme')->with(['message'=>'Tema istrinta']);
+        return redirect('admin/themes')->with(['message'=>'Tema istrinta']);
         // } else {
           // return redirect('admin/theme')->with(['message'=>'Temos istrinti negalima, nes jame yra albumu']);
       }

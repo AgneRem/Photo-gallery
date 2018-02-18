@@ -9,7 +9,8 @@ class Album extends Model
   protected $fillable = [
     'title',
     'theme_id',
-    'description'
+    'description',
+    'cover_image'
     ];
 
     public function theme(){
