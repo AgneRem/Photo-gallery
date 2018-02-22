@@ -16,4 +16,8 @@ class Album extends Model
     public function theme(){
       return $this->belongsTo('App\Theme');
     }
+
+    public function photos(){
+      return $this->hasMany('App\Photo');
+    }
 }

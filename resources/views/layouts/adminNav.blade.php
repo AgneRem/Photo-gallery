@@ -14,6 +14,7 @@
             <a class="navbar-brand" href="">
                 Administrator
             </a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,7 +67,8 @@
                         <ul class="nav navbar-nav">
 
                             <li><a href="{{ route ('themes.index') }}"><span class="glyphicon glyphicon-plane"></span>Themes</a></li>
-                            <li><a href=" {{ route ('albums.index')}}"><span class="glyphicon glyphicon-cloud"></span>Albums</a></li>
+                            <li><a href="/admin/albums"><span class="glyphicon glyphicon-cloud"></span>Albums</a></li>
+                            <li><a href="/admin/albums/create">Create new album</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -75,7 +77,11 @@
         </div>
     </div>
 
-    @yield('content')
+    <div class="col-md-10">
+        @include ('admin.messages')
+        @yield('content')
+    </div>
+
 
 
 </div>

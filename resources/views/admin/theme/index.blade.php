@@ -22,7 +22,7 @@
       @endforeach
 
   </ul>
-  <a href="{{ route ('admin')}}" class="btn btn-default">Atgal</a>
+  <a href="/admin/themes" class="btn btn-default">Atgal</a>
   <a href="{{ route('themes.create')}}" class="btn btn-success">Prideti</a>
 
 </div>

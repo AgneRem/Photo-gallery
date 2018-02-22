@@ -2,7 +2,7 @@
 @section('content')
 
 <h2>Create new Album</h2>
-<form action="{{ route('albums.store')}}" method="post" class="col-md-4" enctype="multipart/form-data">
+<form action="store" method="post" class="col-md-4" enctype="multipart/form-data">
   {{ csrf_field()}}
 
   <div class="form-group">
