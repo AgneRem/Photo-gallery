@@ -23,12 +23,12 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
   Route::get('/albums/create', 'AlbumsController@create');
   Route::post('/albums/store', 'AlbumsController@store');
   Route::get('/albums/{id}', 'AlbumsController@show');
-  Route::get('/photos/create/{id}', 'PhotosController@create');
-  Route::post('/photos/store', 'PhotosController@store');
+  // Route::get('/photos/create/{id}', 'PhotosController@create');
+  // Route::post('/photos/store', 'PhotosController@store');
   Route::resource('/themes', 'ThemeController');
-  Route::post('/photos/{id}', 'PhotosController@destroy');
+  // Route::post('/photos/{id}', 'PhotosController@destroy');
   // Route::resource('/albums', 'AlbumController');
-  // Route::resource('/photos', 'PhotosController');
+  Route::resource('/photos', 'PhotosController');
 
 
 });

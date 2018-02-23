@@ -15,14 +15,14 @@
        @foreach($albums as $album)
         @if($i == $colcount)
           <div class="col-md-4 end">
-            <a href="albums/{{ $album->id}}">
+            <a href="/admin/albums/{{ $album->id}}">
               <img src="{{ asset('images/'. $album->cover_image)}}" alt="" style="max-width:100%">
             </a>
             <br>
             <h4>{{ $album->title}}</h4>
             @else
             <div class="col-md-4">
-              <a href="albums/{{ $album->id}}">
+              <a href="/admin/albums/{{ $album->id}}">
                 <img src="{{ asset('images/'. $album->cover_image)}}" alt="" style="max-width:100%">
               </a>
               <br>

@@ -21,7 +21,7 @@
       <img src="{{ asset('images/'. $photo->photo)}}" alt="" style="max-width: 100%">
     </div>
     <div class="col-md-4">
-      <form action="PhotosController@destroy, $photo->id" method="POST" style="display: inline" onsubmit="return confirm('Are you sure?');">
+      <form action="{{ route('photos.destroy', $photo)}}" method="POST" style="display: inline" onsubmit="return confirm('Are you sure?');">
       <input type="hidden" name="_method" value="DELETE">
        {{ csrf_field() }}
        <button class="btn btn-danger pull-right">Delete Photo</button>

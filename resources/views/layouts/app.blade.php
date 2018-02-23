@@ -46,7 +46,7 @@
 
                             <ul class="dropdown-menu">
                               @if (Auth::user()->admin)
-                              <li><a class="nav-link" href="{{ route('admin')}}">Admin</a></li>
+                              <li><a class="nav-link" href="/admin">Admin</a></li>
                               @endif
                                 <li>
                                     <a class="nav-link" href="{{ route('logout') }}"

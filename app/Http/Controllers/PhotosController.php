@@ -25,7 +25,7 @@ class PhotosController extends Controller
       //save our image
       if ($request->hasFile('photo')){
         $image = $request->file('photo');
-        $filename = time() . '.'  . $image->getClientOriginalName();
+        $filename = $image->getClientOriginalName();
         $location = public_path('images/' . $filename);
         Image::make($image)->resize(800, 400)->save($location);
 
@@ -39,11 +39,11 @@ class PhotosController extends Controller
 
     public function destroy($id)
       {
-        $photo = Photo::find();
-        // if (!empty($album->photo)){
-        //   Storage::delete($album->photo);
-        //
-        // }
+        $photo = Photo::find($id);
+        if (!empty($album->photo)){
+          Storage::delete($album->photo);
+
+        }
         $photo->delete();
         return redirect('admin/albums')->with(['message'=>'photo is deleted']);
       }
