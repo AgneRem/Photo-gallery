@@ -45,7 +45,7 @@ class PhotosController extends Controller
 
         }
         $photo->delete();
-        return redirect('admin/albums')->with(['message'=>'photo is deleted']);
+        return redirect('admin/albums/'.$photo->album_id)->with(['message'=>'photo is deleted']);
       }
 
 

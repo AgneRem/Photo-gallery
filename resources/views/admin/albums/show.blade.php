@@ -1,6 +1,12 @@
 @extends ('layouts.admin')
 @section('content')
 
+  @if (session('message'))
+  <div class="alert alert-danger">
+    {{ session('message')}}
+  </div>
+  @endif
+
 <div class="row">
   <div class="col-md-4">
     <p>Album title: {{ $album->title}}</p>

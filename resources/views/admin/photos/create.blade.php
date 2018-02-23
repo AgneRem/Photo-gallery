@@ -2,7 +2,7 @@
 @section('content')
 
 <h2>Upload photos</h2>
-<form action="{{ route('photos.create')}}" method="post" class="col-md-4" enctype="multipart/form-data">
+<form action="{{ route('photos.store')}}" method="post" class="col-md-4" enctype="multipart/form-data">
   {{ csrf_field()}}
 
     <div class="form-group">

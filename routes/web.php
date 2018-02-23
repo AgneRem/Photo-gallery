@@ -29,6 +29,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
   // Route::post('/photos/{id}', 'PhotosController@destroy');
   // Route::resource('/albums', 'AlbumController');
   Route::resource('/photos', 'PhotosController');
+  Route::get('/photos/create/{id}', 'PhotosController@create');
+
 
 
 });
